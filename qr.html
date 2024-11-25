@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generar Código QR en una Superficie Plana</title>
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      height: 100vh; 
+      margin: 0; 
+      background-color: #f7f7f7;
+    }
+    #qrcode {
+      border: 2px solid #333; 
+      padding: 10px;
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <div id="qrcode"></div>
+  
+  <script>
+    // Generamos el código QR con el texto o URL que quieras
+    const qrcode = new QRCode(document.getElementById("qrcode"), {
+      text: "muñeca.html", // Cambia este enlace por el que desees
+      width: 256,  // Tamaño del código QR
+      height: 256, // Tamaño del código QR
+    });
+  </script>
+</body>
+</html>
