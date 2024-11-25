@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Muñeco VR con A-Frame</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <style>
+      body { margin: 0; overflow: hidden; }
+      a-scene { height: 100vh; width: 100%; }
+    </style>
+  </head>
+  <body>
+    <a-scene embedded>
+      <!-- Entorno VR -->
+      <a-sky color="#ECECEC"></a-sky> <!-- Fondo claro -->
+
+      <!-- Cuerpo del muñeco (cilindro amarillo) -->
+      <a-cylinder position="0 1 -3" radius="0.3" height="1.2" color="#FFD700" segment-height="0.2"></a-cylinder>
+      
+      <!-- Cabeza (esfera color piel) -->
+      <a-sphere position="0 2.2 -3" radius="0.4" color="#FCE6A0"></a-sphere>
+      
+      <!-- Ojos (esferas negras) -->
+      <a-sphere position="0.1 2.5 -3" radius="0.05" color="#000000"></a-sphere>
+      <a-sphere position="-0.1 2.5 -3" radius="0.05" color="#000000"></a-sphere>
+      
+      <!-- Boca (anillo negro) -->
+      <a-entity position="0 2.1 -3" geometry="primitive: ring; radiusInner: 0.1; radiusOuter: 0.15" material="color: #000000"></a-entity>
+      
+      <!-- Pelo rubio (esferas amarillas) -->
+      <a-sphere position="0 2.6 -3" radius="0.45" color="#FFD700"></a-sphere>
+      <a-sphere position="0.3 2.8 -3" radius="0.1" color="#FFD700"></a-sphere>
+      <a-sphere position="-0.3 2.8 -3" radius="0.1" color="#FFD700"></a-sphere>
+      
+      <!-- Brazos (cilindros amarillos) -->
+      <a-cylinder position="0.6 1.7 -3" radius="0.1" height="0.8" color="#FFD700"></a-cylinder>
+      <a-cylinder position="-0.6 1.7 -3" radius="0.1" height="0.8" color="#FFD700"></a-cylinder>
+      
+      <!-- Piernas (cilindros amarillos) -->
+      <a-cylinder position="0.3 0.5 -3" radius="0.15" height="1" color="#FFD700"></a-cylinder>
+      <a-cylinder position="-0.3 0.5 -3" radius="0.15" height="1" color="#FFD700"></a-cylinder>
+
+      <!-- Cámara VR (aparece la cámara en la escena para ver el muñeco) -->
+      <a-camera position="0 1.6 0"></a-camera>
+    </a-scene>
+  </body>
+</html>
